@@ -4,12 +4,15 @@
  */
 package Hospital;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sahil
  */
 public class Hospital extends javax.swing.JFrame {
-
+private JFrame frame;
     /**
      * Creates new form Hospital
      */
@@ -77,9 +80,12 @@ public class Hospital extends javax.swing.JFrame {
         jTextField16 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1400, 800));
+        setPreferredSize(new java.awt.Dimension(1400, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -106,7 +112,7 @@ public class Hospital extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 60)); // NOI18N
         jLabel1.setText("Hospital Management System");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 820, 70));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 820, 70));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 1380, 110));
 
@@ -125,7 +131,7 @@ public class Hospital extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton3.setText("GP Appointment");
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 230, -1));
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 190, -1));
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton4.setText("Doctor");
@@ -133,11 +139,16 @@ public class Hospital extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setText("Login");
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 20, 140, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 20, 100, -1));
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton6.setText("jButton1");
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 20, 160, -1));
+        jButton6.setText("Exit");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 160, -1));
 
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton7.setText("Prescription");
@@ -146,11 +157,11 @@ public class Hospital extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, 160, -1));
+        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 150, -1));
 
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton8.setText("Patient");
-        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 160, -1));
+        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 160, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 1380, 80));
 
@@ -159,7 +170,12 @@ public class Hospital extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 180, -1));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibrufen" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -306,6 +322,18 @@ public class Hospital extends javax.swing.JFrame {
         jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, 190, -1));
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Name of the Tablets", "Reference No", "Dose (mg)", "Number of Tablets", "LOT", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "NHS No", "Patient Name", "Date of Birth", "Patient Address"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 687, 1380, 80));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -332,6 +360,21 @@ public class Hospital extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+            frame = new JFrame("Exit");
+        if (JOptionPane.showConfirmDialog(frame, "Confirm do you want to exit?", "Hospital Management System",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION);
+        {System.exit(0);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    if (jComboBox1.getSelectedItem().equals("Ibuprofen") ){
+    jTextField3.setText("Ibu887654");
+    jTextField2.setText("2");
+    }
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -402,6 +445,8 @@ public class Hospital extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
