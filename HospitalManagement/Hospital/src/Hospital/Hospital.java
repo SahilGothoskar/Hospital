@@ -107,6 +107,7 @@ private JFrame frame;
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 980, 80));
 
+        jPanel3.setBackground(new java.awt.Color(255, 204, 153));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -166,11 +167,11 @@ private JFrame frame;
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 1380, 80));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Name of the Tablets");
+        jLabel3.setText("Name of the Tablets:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 180, -1));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen", "Co-codamal", "Amlodipine" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -179,31 +180,31 @@ private JFrame frame;
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Reference No");
+        jLabel4.setText("Reference No:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 180, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("Dose (mg)");
+        jLabel5.setText("Dose (mg):");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Number of Tablets");
+        jLabel6.setText("Number of Tablets:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 180, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel7.setText("Issue Date");
+        jLabel7.setText("Issue Date:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setText("LOT");
+        jLabel9.setText("LOT:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 180, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel11.setText("Daily Dose");
+        jLabel11.setText("Daily Dose:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 180, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setText("Expiry Date");
+        jLabel12.setText("Expiry Date:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 180, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -231,19 +232,19 @@ private JFrame frame;
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel19.setText("NHS No");
+        jLabel19.setText("NHS No:");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 180, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel20.setText("Patient Name");
+        jLabel20.setText("Patient Name:");
         getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 180, -1));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel21.setText("Date of Birth");
+        jLabel21.setText("Date of Birth:");
         getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 520, 180, -1));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel22.setText("Patient Address");
+        jLabel22.setText("Patient Address:");
         getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 180, -1));
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -264,16 +265,16 @@ private JFrame frame;
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 190, -1));
 
         jTextField6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, 190, -1));
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 190, -1));
 
         jTextField7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 190, -1));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 190, -1));
 
         jTextField8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 190, -1));
+        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, 190, -1));
 
         jTextField9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 190, -1));
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 190, -1));
 
         jTextField10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
@@ -317,10 +318,10 @@ private JFrame frame;
         getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 190, -1));
 
         jTextField17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 190, -1));
+        getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 190, -1));
 
         jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, 190, -1));
+        getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 190, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -373,6 +374,108 @@ private JFrame frame;
     if (jComboBox1.getSelectedItem().equals("Ibuprofen") ){
     jTextField3.setText("Ibu887654");
     jTextField2.setText("2");
+    jTextField4.setText("32");
+    jTextField5.setText("678912324");
+    jTextField6.setText("10/02/2022");
+    jTextField7.setText("20/04/2023");
+    jTextField8.setText("4");
+    
+    jTextField9.setText("Bleeding");
+    jTextField10.setText("Place Dispensary");
+    jTextField11.setText("Less than 20%");
+    jTextField12.setText("No");
+    jTextField13.setText("Use Water, No Alchol");
+    jTextField14.setText("P134567");
+    jTextField15.setText("6466564");
+    }
+    
+    else if (jComboBox1.getSelectedItem().equals("Paracetamol") ){
+    jTextField3.setText("345887654");
+    jTextField2.setText("500");
+    jTextField4.setText("16");
+    jTextField5.setText("0204324");
+    jTextField6.setText("07/05/2022");
+    jTextField7.setText("20/04/2025");
+    jTextField8.setText("2");
+    
+    jTextField9.setText("Feeling Sick");
+    jTextField10.setText("Place Dispensary");
+    jTextField11.setText("Less than 25%");
+    jTextField12.setText("No");
+    jTextField13.setText("Use Water, No Alchol");
+    jTextField14.setText("P5545637");
+    jTextField15.setText("875564");
+    }
+        
+    else if (jComboBox1.getSelectedItem().equals("Amlodipine") ){
+    jTextField3.setText("Am05875");
+    jTextField2.setText("5");
+    jTextField4.setText("28");
+    jTextField5.setText("8745475");
+    jTextField6.setText("07/07/2022");
+    jTextField7.setText("28/04/2024");
+    jTextField8.setText("1");
+    
+    jTextField9.setText("Liver Disease");
+    jTextField10.setText("Ability to drive may be affected");
+    jTextField11.setText("No Special Storage");
+    jTextField12.setText("No");
+    jTextField13.setText("Use Water, No Alchol");
+    jTextField14.setText("P9129454");
+    jTextField15.setText("6346564");
+    }
+    else if (jComboBox1.getSelectedItem().equals("Make a Selection") ){
+    jTextField3.setText("");
+    jTextField2.setText("");
+    jTextField4.setText("");
+    jTextField5.setText("");
+    jTextField6.setText("");
+    jTextField7.setText("");
+    jTextField8.setText("");
+    
+    jTextField9.setText("");
+    jTextField10.setText("");
+    jTextField11.setText("");
+    jTextField12.setText("");
+    jTextField13.setText("");
+    jTextField14.setText("");
+    jTextField15.setText("");
+    }
+    
+        else if (jComboBox1.getSelectedItem().equals("Paracetamol") ){
+    jTextField3.setText("345887654");
+    jTextField2.setText("500");
+    jTextField4.setText("16");
+    jTextField5.setText("0204324");
+    jTextField6.setText("07/05/2022");
+    jTextField7.setText("20/04/2025");
+    jTextField8.setText("2");
+    
+    jTextField9.setText("Feeling Sick");
+    jTextField10.setText("Place Dispensary");
+    jTextField11.setText("Less than 25%");
+    jTextField12.setText("No");
+    jTextField13.setText("Use Water, No Alchol");
+    jTextField14.setText("P5545637");
+    jTextField15.setText("875564");
+    }
+        
+    else if (jComboBox1.getSelectedItem().equals("Co-codamol") ){
+    jTextField3.setText("COCO6758940");
+    jTextField2.setText("500");
+    jTextField4.setText("30");
+    jTextField5.setText("B770034");
+    jTextField6.setText("11/10/2022");
+    jTextField7.setText("28/01/2024");
+    jTextField8.setText("2");
+    
+    jTextField9.setText("Dizziness");
+    jTextField10.setText("Place Dispensary");
+    jTextField11.setText("Less than 20%");
+    jTextField12.setText("No");
+    jTextField13.setText("Use Water, No Alchol");
+    jTextField14.setText("P9589454");
+    jTextField15.setText("646564");
     }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
