@@ -7,6 +7,7 @@ package Hospital;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author Sahil
@@ -30,7 +31,8 @@ private JFrame frame;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -80,8 +82,6 @@ private JFrame frame;
         jTextField16 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1400, 800));
@@ -91,7 +91,12 @@ private JFrame frame;
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 440));
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane4.setViewportView(jTextArea3);
+
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 460));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 140, 400, 460));
 
@@ -171,7 +176,7 @@ private JFrame frame;
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 180, -1));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen", "Co-codamal", "Amlodipine" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen", "Co-codamol", "Amlodipine" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -282,7 +287,7 @@ private JFrame frame;
                 jTextField10ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 190, -1));
+        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 250, -1));
 
         jTextField11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
@@ -290,7 +295,7 @@ private JFrame frame;
                 jTextField11ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 190, -1));
+        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 250, -1));
 
         jTextField12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
@@ -298,10 +303,10 @@ private JFrame frame;
                 jTextField12ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 190, -1));
+        getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 250, -1));
 
         jTextField13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 190, 30));
+        getContentPane().add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 250, 30));
 
         jTextField14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
@@ -309,31 +314,19 @@ private JFrame frame;
                 jTextField14ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 190, -1));
+        getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 250, -1));
 
         jTextField15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 190, -1));
+        getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 250, -1));
 
         jTextField16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 190, -1));
+        getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 250, -1));
 
         jTextField17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 190, -1));
+        getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 250, -1));
 
         jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 190, -1));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Name of the Tablets", "Reference No", "Dose (mg)", "Number of Tablets", "LOT", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "NHS No", "Patient Name", "Date of Birth", "Patient Address"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 687, 1380, 80));
+        getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 250, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -359,7 +352,65 @@ private JFrame frame;
     }//GEN-LAST:event_jTextField14ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        String Qty1 = (jTextField2.getText());
+        String Qty2 = (jTextField3.getText());
+        String Qty3 = (jTextField4.getText());
+        String Qty4 = (jTextField5.getText());
+        String Qty5 = (jTextField8.getText());
+        String Qty6 = (jTextField9.getText());
+        String Qty7 = (jTextField10.getText());
+        String Qty8 = (jTextField13.getText());
+        String Qty9 = (jTextField14.getText());
+        String Qty10 = (jTextField16.getText());
+        String Qty11 = (jTextField18.getText());
+        String Qty12 = (jTextField17.getText());
+        String Qty13 = "";
+        
+
+if(jComboBox1.getSelectedItem().equals("Ibuprofen"))
+{
+Qty13 ="Ibuprofen";
+}
+else if (jComboBox1.getSelectedItem().equals("Paracetamol"))
+{
+Qty13 ="Paracetamol";
+   }
+else if (jComboBox1.getSelectedItem().equals("Co-codamol"))
+{
+Qty13= "Co-codamol";
+   }
+
+else if (jComboBox1.getSelectedItem().equals("Amlodapine"))
+{
+Qty13= "Amlodapine";
+   }
+        
+        jTextArea3.setText("");
+        
+        jTextArea3.append("\t\n\tHospital Management System\n"
+        +"\nPatient Name:\t\t" + Qty10
+        +"\nDate of Birth:\t\t" + Qty12
+        +"\nPatient Address:\t" + Qty11
+        +"\nPrescription:\t\t" + Qty13
+        +"\n\nReference No:\t\t" + Qty2
+        +"\n\nDose (mg):\t\t" + Qty1
+        +"\n\nNumber of Tablets:\t" + Qty3
+        +"\n\nLOT:\t\t" + Qty4
+        +"\n\nDaily Dose:\t\t" + Qty5
+        +"\n\nPossible Side Effects:\t" + Qty6
+        +"\n\nFurther Information:\t" + Qty7
+        +"\n\nHow to Use Medication:\t" + Qty8
+        +"\n\nPatient ID:\t\t" + Qty9
+        +"\n\n\tPatient Instruction we have introduced a \n\tfree text confirmation \n\t" 
+        +"TEXT REMINDERS FOR APPOINTMENT" );
+
+    
+        
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -385,7 +436,7 @@ private JFrame frame;
     jTextField11.setText("Less than 20%");
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
-    jTextField14.setText("P134567");
+    //jTextField14.setText("P134567");
     jTextField15.setText("6466564");
     }
     
@@ -403,7 +454,7 @@ private JFrame frame;
     jTextField11.setText("Less than 25%");
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
-    jTextField14.setText("P5545637");
+    //jTextField14.setText("P5545637");
     jTextField15.setText("875564");
     }
         
@@ -421,7 +472,7 @@ private JFrame frame;
     jTextField11.setText("No Special Storage");
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
-    jTextField14.setText("P9129454");
+    //jTextField14.setText("P9129454");
     jTextField15.setText("6346564");
     }
     else if (jComboBox1.getSelectedItem().equals("Make a Selection") ){
@@ -438,7 +489,7 @@ private JFrame frame;
     jTextField11.setText("");
     jTextField12.setText("");
     jTextField13.setText("");
-    jTextField14.setText("");
+    //jTextField14.setText("");
     jTextField15.setText("");
     }
     
@@ -456,7 +507,7 @@ private JFrame frame;
     jTextField11.setText("Less than 25%");
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
-    jTextField14.setText("P5545637");
+    //jTextField14.setText("P5545637");
     jTextField15.setText("875564");
     }
         
@@ -474,7 +525,7 @@ private JFrame frame;
     jTextField11.setText("Less than 20%");
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
-    jTextField14.setText("P9589454");
+    //jTextField14.setText("P9589454");
     jTextField15.setText("646564");
     }
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -548,9 +599,8 @@ private JFrame frame;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
