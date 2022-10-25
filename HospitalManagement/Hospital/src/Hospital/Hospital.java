@@ -6,12 +6,15 @@ package Hospital;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 
 
 /**
  *
  * @author Sahil
  */
+import javax.swing.table.DefaultTableModel;
 public class Hospital extends javax.swing.JFrame {
 private JFrame frame;
     /**
@@ -83,6 +86,8 @@ private JFrame frame;
         jTextField16 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1400, 800));
@@ -130,10 +135,20 @@ private JFrame frame;
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setText("Delete");
         jButton1.setToolTipText("");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 140, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Update");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 20, 170, -1));
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -337,6 +352,20 @@ private JFrame frame;
 
         jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 250, -1));
+
+        jScrollPane1.setName(""); // NOI18N
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name of Tablets", "Reference No", "Dose (mg)", "Number of Tablets", "LOT", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "NHS No", "Patient Name", "Date of Birth", "Patient Address"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 680, 1380, 120));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -562,6 +591,37 @@ Qty13= "Amlodapine";
     jComboBox1.getModel().setSelectedItem("Make a Selection");
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.addRow (new Object[] {jComboBox1.getSelectedItem().toString(),
+        jTextField3.getText(), jTextField2.getText(), jTextField4.getText(), jTextField5.getText (),
+        jTextField6.getText(), jTextField7.getText(), jTextField8.getText(),
+        jTextField9.getText(), jTextField10.getText(), jTextField11.getText(),
+         jTextField12.getText(),
+        jTextField13.getText(),
+        jTextField14.getText(), jTextField15.getText(),jTextField16.getText(), jTextField17.getText(), jTextField18.getText(), });    
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        if(jTable1.getSelectedRow() ==-1){
+        if(jTable1.getRowCount() ==0) {
+            
+        JOptionPane.showMessageDialog(null, "No data to delete", "Hospital Management Systems",
+        JOptionPane.OK_OPTION );
+        
+        }else{
+            JOptionPane.showMessageDialog (null, "Select a row to delete", "Hospital Management Systems",
+        JOptionPane. OK_OPTION);
+        }
+        
+        }
+        else
+        {
+        model.removeRow(jTable1.getSelectedRow());
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -632,7 +692,9 @@ Qty13= "Amlodapine";
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
