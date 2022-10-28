@@ -210,19 +210,35 @@ public class Login extends javax.swing.JFrame {
             String Username = jTextField1.getText();
             String Password = jPasswordField1.getText();
             
-            if (Username.contains("one") && (Password.contains("one")))
+            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")))
             {
             this.setVisible(false);
             Hospital iHospital = new Hospital();
             iHospital.setVisible(true);
             }
             
-            else if (!(Username.contains("one") && (Password.contains("one"))))
+            else if (!(Username.contains("SysAdmin") && (Password.contains("SysAdmin"))))
             {
             jTextField1.setText("");
             jPasswordField1.setText("");
             attempt +=1;
             }
+            
+            
+            if (Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))
+            {
+            this.setVisible(false);
+            Hospital iHospital = new Hospital();
+            iHospital.setVisible(true);
+            }
+            
+            else if (!(Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin"))))
+            {
+            jTextField1.setText("");
+            jPasswordField1.setText("");
+            attempt +=1;
+            }
+            
             
             if(attempt==3)
             {
