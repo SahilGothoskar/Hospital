@@ -268,7 +268,7 @@ private JFrame frame;
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel19.setText("NHS No:");
+        jLabel19.setText("Community");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 180, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -366,7 +366,7 @@ private JFrame frame;
 
             },
             new String [] {
-                "Name of Tablets", "Reference No", "Dose (mg)", "Number of Tablets", "LOT", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "NHS No", "Patient Name", "Date of Birth", "Patient Address"
+                "Name of Tablets", "Reference No", "Dose (mg)", "Number of Tablets", "LOT", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "Community", "Patient Name", "Date of Birth", "Patient Address"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -482,7 +482,7 @@ Qty13= "Amlodapine";
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
     //jTextField14.setText("P134567");
-    jTextField15.setText("6466564");
+    //jTextField15.setText("6466564");
     }
     
     else if (jComboBox1.getSelectedItem().equals("Paracetamol") ){
@@ -500,7 +500,7 @@ Qty13= "Amlodapine";
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
     //jTextField14.setText("P5545637");
-    jTextField15.setText("875564");
+    //jTextField15.setText("875564");
     }
         
     else if (jComboBox1.getSelectedItem().equals("Amlodipine") ){
@@ -518,7 +518,7 @@ Qty13= "Amlodapine";
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
     //jTextField14.setText("P9129454");
-    jTextField15.setText("6346564");
+    //jTextField15.setText("6346564");
     }
     else if (jComboBox1.getSelectedItem().equals("Make a Selection") ){
     jTextField3.setText("");
@@ -553,7 +553,7 @@ Qty13= "Amlodapine";
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
     //jTextField14.setText("P5545637");
-    jTextField15.setText("875564");
+    //jTextField15.setText("875564");
     }
         
     else if (jComboBox1.getSelectedItem().equals("Co-codamol") ){
@@ -571,7 +571,7 @@ Qty13= "Amlodapine";
     jTextField12.setText("No");
     jTextField13.setText("Use Water, No Alchol");
     //jTextField14.setText("P9589454");
-    jTextField15.setText("646564");
+    //jTextField15.setText("646564");
     }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -595,6 +595,7 @@ Qty13= "Amlodapine";
     jTextField17.setText("");
     jTextField18.setText("");
     jComboBox1.getModel().setSelectedItem("Make a Selection");
+    jTextArea3.setText("");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
