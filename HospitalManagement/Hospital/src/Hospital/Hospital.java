@@ -6,8 +6,11 @@ package Hospital;
 
 import Community.Community;
 import Login.Login;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -90,8 +93,10 @@ private JFrame frame;
         jTextField18 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 204, 153));
         setMinimumSize(new java.awt.Dimension(1400, 800));
         setPreferredSize(new java.awt.Dimension(1400, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -134,6 +139,7 @@ private JFrame frame;
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(255, 204, 204));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setText("Delete");
         jButton1.setToolTipText("");
@@ -144,6 +150,7 @@ private JFrame frame;
         });
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 140, -1));
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Update");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +160,7 @@ private JFrame frame;
         });
         jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 20, 170, -1));
 
+        jButton3.setBackground(new java.awt.Color(255, 204, 255));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton3.setText("Community");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -162,10 +170,12 @@ private JFrame frame;
         });
         jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 190, -1));
 
+        jButton4.setBackground(new java.awt.Color(204, 255, 204));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton4.setText("Doctor");
         jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 20, 150, -1));
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 255));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setText("Login");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -175,6 +185,7 @@ private JFrame frame;
         });
         jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 90, -1));
 
+        jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton6.setText("Exit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -184,6 +195,7 @@ private JFrame frame;
         });
         jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 20, 160, -1));
 
+        jButton7.setBackground(new java.awt.Color(255, 204, 204));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton7.setText("Prescription");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -193,10 +205,12 @@ private JFrame frame;
         });
         jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 150, -1));
 
+        jButton8.setBackground(new java.awt.Color(204, 204, 255));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton8.setText("Patient");
         jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 160, -1));
 
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
         jButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton9.setText("Reset");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -212,6 +226,7 @@ private JFrame frame;
         jLabel3.setText("Name of the Tablets:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 180, -1));
 
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 204));
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen", "Co-codamol", "Amlodipine" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -271,23 +286,23 @@ private JFrame frame;
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel18.setText("Patient ID:");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 180, -1));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel19.setText("Community");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 180, -1));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 440, 180, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setText("Patient Name:");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 180, -1));
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 480, 180, -1));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel21.setText("Date of Birth:");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 520, 180, -1));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 530, 180, -1));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel22.setText("Patient Address:");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 180, -1));
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 180, -1));
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 190, -1));
@@ -343,7 +358,7 @@ private JFrame frame;
         getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 250, -1));
 
         jTextField13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 250, 30));
+        getContentPane().add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 250, 40));
 
         jTextField14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
@@ -351,15 +366,28 @@ private JFrame frame;
                 jTextField14ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 250, -1));
+        getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 400, 250, -1));
 
         jTextField15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 250, -1));
+        getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 250, -1));
 
         jTextField16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 250, -1));
+        getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, 250, -1));
 
         jTextField17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField17ActionPerformed(evt);
+            }
+        });
+        jTextField17.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField17KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField17KeyTyped(evt);
+            }
+        });
         getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 250, -1));
 
         jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -367,6 +395,7 @@ private JFrame frame;
 
         jScrollPane1.setName(""); // NOI18N
 
+        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -378,6 +407,10 @@ private JFrame frame;
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 680, 1380, 120));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 520, 120, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -653,6 +686,28 @@ Qty13= "Amlodapine";
     iCommunity.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
+
+    private void jTextField17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyReleased
+        String PATTERN = "^([0-2][0-9]||3[0-1])/(0[0-9]||1[0-2])/([0-9][0-9])?[0-9][0-9]$";
+        Pattern patt = Pattern.compile(PATTERN);
+        Matcher match = patt.matcher(jTextField17.getText());
+        if(!match.matches()){
+        jLabel8.setText("DD/MM/YYYY!!");
+               
+        }
+        else 
+        
+        {jLabel8.setText(null);}
+    
+    }//GEN-LAST:event_jTextField17KeyReleased
+
+    private void jTextField17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyTyped
+
+    }//GEN-LAST:event_jTextField17KeyTyped
+    
     /**
      * @param args the command line arguments
      */
@@ -718,6 +773,7 @@ Qty13= "Amlodapine";
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
