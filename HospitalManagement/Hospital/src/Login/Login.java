@@ -210,34 +210,25 @@ public class Login extends javax.swing.JFrame {
             String Username = jTextField1.getText();
             String Password = jPasswordField1.getText();
             
-            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")))
+            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))
             {
             this.setVisible(false);
             Hospital iHospital = new Hospital();
             iHospital.setVisible(true);
             }
             
-            else if (!(Username.contains("SysAdmin") && (Password.contains("SysAdmin"))))
+            else if (!(Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("SystemAdmin") && (Password.contains("SystemAdmin")))) 
             {
+            JOptionPane.showMessageDialog (null, "Please enter valid credentials!!", "Community Admin",JOptionPane. OK_OPTION);
             jTextField1.setText("");
             jPasswordField1.setText("");
             attempt +=1;
+            
             }
             
+                 
             
-            if (Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))
-            {
-            this.setVisible(false);
-            Hospital iHospital = new Hospital();
-            iHospital.setVisible(true);
-            }
             
-            else if (!(Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin"))))
-            {
-            jTextField1.setText("");
-            jPasswordField1.setText("");
-            attempt +=1;
-            }
             
             
             if(attempt==3)

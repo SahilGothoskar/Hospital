@@ -4,6 +4,7 @@
  */
 package Hospital;
 
+import Community.Community;
 import Login.Login;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -153,7 +154,12 @@ private JFrame frame;
         jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 20, 170, -1));
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setText("GP Appointment");
+        jButton3.setText("Community");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 190, -1));
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -600,6 +606,11 @@ Qty13= "Amlodapine";
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        if (jComboBox1.getSelectedItem().toString().contains("Make a Selection")){ 
+         JOptionPane.showMessageDialog (null, "Please select tablet name!!", "Doctor Admin",JOptionPane. OK_OPTION);   
+        }
+        else if(!(jComboBox1.getSelectedItem().toString().contains("Make a Selection")))
+        {
         model.addRow (new Object[] {jComboBox1.getSelectedItem().toString(),
         jTextField3.getText(), jTextField2.getText(), jTextField4.getText(), jTextField5.getText (),
         jTextField6.getText(), jTextField7.getText(), jTextField8.getText(),
@@ -607,6 +618,7 @@ Qty13= "Amlodapine";
          jTextField12.getText(),
         jTextField13.getText(),
         jTextField14.getText(), jTextField15.getText(),jTextField16.getText(), jTextField17.getText(), jTextField18.getText(), });    
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -634,6 +646,12 @@ Qty13= "Amlodapine";
     Login iLogin = new Login();
     iLogin.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    this.setVisible(false);
+    Community iCommunity = new Community();
+    iCommunity.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
