@@ -6,6 +6,7 @@ package Hospital;
 
 import Community.Community;
 import Login.Login;
+import Patient.Patient;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JFrame;
@@ -208,6 +209,11 @@ private JFrame frame;
         jButton8.setBackground(new java.awt.Color(204, 204, 255));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton8.setText("Patient");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 160, -1));
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
@@ -707,6 +713,12 @@ Qty13= "Amlodapine";
     private void jTextField17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyTyped
 
     }//GEN-LAST:event_jTextField17KeyTyped
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    this.setVisible(false);
+    Patient iPatient = new Patient();
+    iPatient.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
     
     /**
      * @param args the command line arguments
