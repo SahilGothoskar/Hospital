@@ -49,12 +49,9 @@ private JFrame frame;
         jPanel4 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -153,28 +150,13 @@ private JFrame frame;
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setText("Update");
+        jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 20, 170, -1));
-
-        jButton3.setBackground(new java.awt.Color(255, 204, 255));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setText("Community");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 190, -1));
-
-        jButton4.setBackground(new java.awt.Color(204, 255, 204));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton4.setText("Doctor");
-        jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 20, 150, -1));
 
         jButton5.setBackground(new java.awt.Color(204, 204, 255));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -184,7 +166,7 @@ private JFrame frame;
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 90, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 90, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -194,7 +176,7 @@ private JFrame frame;
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 20, 160, -1));
+        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, 160, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 204, 204));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -204,17 +186,7 @@ private JFrame frame;
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 150, -1));
-
-        jButton8.setBackground(new java.awt.Color(204, 204, 255));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton8.setText("Patient");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 160, -1));
+        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 150, -1));
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
         jButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -224,7 +196,7 @@ private JFrame frame;
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 20, 100, -1));
+        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 100, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 1380, 80));
 
@@ -416,7 +388,7 @@ private JFrame frame;
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 520, 120, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 530, 120, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -686,12 +658,6 @@ Qty13= "Amlodapine";
     iLogin.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    this.setVisible(false);
-    Community iCommunity = new Community();
-    iCommunity.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField17ActionPerformed
@@ -704,21 +670,15 @@ Qty13= "Amlodapine";
         jLabel8.setText("DD/MM/YYYY!!");
                
         }
-        else 
-        
-        {jLabel8.setText(null);}
+        else{
+            jLabel8.setText("");
+        }
     
     }//GEN-LAST:event_jTextField17KeyReleased
 
     private void jTextField17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyTyped
 
     }//GEN-LAST:event_jTextField17KeyTyped
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-    this.setVisible(false);
-    Patient iPatient = new Patient();
-    iPatient.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -758,12 +718,9 @@ Qty13= "Amlodapine";
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;

@@ -8,6 +8,8 @@ import Community.Community;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import Hospital.Hospital;
+import Patient.Patient;
+import Sysadmin.Sysadmin;
 
 
 /**
@@ -212,9 +214,9 @@ public class Login extends javax.swing.JFrame {
             String Password = jPasswordField1.getText();
 
             
-            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("CommunityAdmin") && (Password.contains("CommunityAdmin")) )
+            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("CommunityAdmin") && (Password.contains("CommunityAdmin")) || Username.contains("Patient") && (Password.contains("Patient")) )
             {
-            if ((Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))){
+            if ((Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))){
             this.setVisible(false);
             Hospital iHospital = new Hospital();
             iHospital.setVisible(true);
@@ -229,8 +231,18 @@ public class Login extends javax.swing.JFrame {
             Community iCommunity = new Community();
             iCommunity.setVisible(true);
             }
+            if ((Username.contains("Patient") && (Password.contains("Patient"))))
+            {
+            this.setVisible(false);
+            Patient iPatient = new Patient();
+            iPatient.setVisible(true);
+            }
+            if((Username.contains("SysAdmin") && (Password.contains("SysAdmin")))) {
+            this.setVisible(false);
+            Sysadmin iSysadmin = new Sysadmin();
+            iSysadmin.setVisible(true);
             
-
+            }   
             
             }
             //else if (!(Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("SystemAdmin") && (Password.contains("SystemAdmin")))) 

@@ -6,9 +6,12 @@ package Community;
 
 //import Hospital.Hospital;
 import Login.Login;
+import Patient.Patient;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -16,6 +19,10 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Community extends javax.swing.JFrame {
 private JFrame frame;
+ArrayList<Food> mylist;
+String header[]= new String[]{"Doc Name", "Hospital Name", "Speciality","city","Zipcode","Community"};
+DefaultTableModel dtm;
+int row, col;
     /**
      * Creates new form Community
      */
@@ -53,6 +60,7 @@ private JFrame frame;
         jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1400, 800));
@@ -175,7 +183,7 @@ private JFrame frame;
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 390, 160, 40));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 370, 160, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Zip Code");
@@ -190,6 +198,17 @@ private JFrame frame;
 
         jTextField6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 280, 30));
+
+        jButton6.setBackground(new java.awt.Color(255, 204, 51));
+        jButton6.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
+        jButton6.setText("Load");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 380, 160, 40));
 
         getAccessibleContext().setAccessibleDescription("");
 
@@ -244,6 +263,27 @@ private JFrame frame;
         }   
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+          TableModel model1 = jTable1.getModel();
+          int indexs[] = jTable1.getSelectedRows();
+          Object[] row = new Object[6];
+          Patient frm2 = new Patient();
+          DefaultTableModel model2 = (DefaultTableModel)frm2.jTable1.getModel();
+           
+            for(int i = 0; i < indexs.length; i++)
+        {
+            row[0] = model1.getValueAt(indexs[i], 0);
+            row[1] = model1.getValueAt(indexs[i], 1);
+            row[2] = model1.getValueAt(indexs[i], 2);
+            row[3] = model1.getValueAt(indexs[i], 3);
+            row[4] = model1.getValueAt(indexs[i], 4);
+            row[5] = model1.getValueAt(indexs[i],5);
+            model2.addRow(row);
+        }
+        
+        frm2.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -285,6 +325,7 @@ private JFrame frame;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
