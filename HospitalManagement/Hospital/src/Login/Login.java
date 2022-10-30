@@ -4,6 +4,7 @@
  */
 package Login;
 
+import Community.Community;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import Hospital.Hospital;
@@ -209,15 +210,38 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
             String Username = jTextField1.getText();
             String Password = jPasswordField1.getText();
+
             
-            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))
+            if (Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("CommunityAdmin") && (Password.contains("CommunityAdmin")) )
             {
+            if ((Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")))){
             this.setVisible(false);
             Hospital iHospital = new Hospital();
             iHospital.setVisible(true);
             }
+            else if (Username.contains("CommunityAdmin") && (Password.contains("CommunityAdmin")))
+            {
+            //JOptionPane.showMessageDialog (null, "Please enter valid credentials!!", "Community Admin",JOptionPane. OK_OPTION);
+            //jTextField1.setText("");
+            //jPasswordField1.setText("");
+            //attempt +=1;
+            this.setVisible(false);
+            Community iCommunity = new Community();
+            iCommunity.setVisible(true);
+            }
             
-            else if (!(Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("SystemAdmin") && (Password.contains("SystemAdmin")))) 
+
+            
+            }
+            //else if (!(Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("SystemAdmin") && (Password.contains("SystemAdmin")))) 
+            //if (Username.contains("CommunityAdmin") && (Password.contains("CommunityAdmin")))
+            //{
+            //this.setVisible(false);
+            //Community iCommunity = new Community();
+            //iCommunity.setVisible(true);
+            //}
+            
+            else if (!(Username.contains("SysAdmin") && (Password.contains("SysAdmin")) || Username.contains("HospitalAdmin") && (Password.contains("HospitalAdmin")) || Username.contains("CommunityAdmin") && (Password.contains("CommunityAdmin")) ))
             {
             JOptionPane.showMessageDialog (null, "Please enter valid credentials!!", "Community Admin",JOptionPane. OK_OPTION);
             jTextField1.setText("");
@@ -225,7 +249,6 @@ public class Login extends javax.swing.JFrame {
             attempt +=1;
             
             }
-            
                  
             
             
