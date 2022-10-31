@@ -726,9 +726,10 @@ Qty13= "Pulse Rate";
          jTextField16.setEditable(false);
          
          jLabel23.setText("Invalid Name!");
-     }else
+     }
+     else
      {
-     jLabel23.setText(   null);
+     jLabel23.setText( null);
      jTextField16.setEditable(true);
      }           // TODO add your handling code here:
     }//GEN-LAST:event_jTextField16KeyReleased

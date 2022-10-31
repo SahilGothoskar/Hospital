@@ -79,7 +79,7 @@ int row, col;
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 0, 51));
-        jLabel1.setText("Community");
+        jLabel1.setText("Hospital Name");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 200, 40));
 
         jLabel3.setBackground(new java.awt.Color(255, 204, 153));
@@ -138,7 +138,7 @@ int row, col;
 
             },
             new String [] {
-                "Doctor Name", "Community", "Speciality", "City", "Zip Code", "Community"
+                "Doctor Name", "Hospital Name", "Speciality", "City", "Zip Code", "Community"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -148,7 +148,7 @@ int row, col;
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Update");
+        jButton1.setText("Add");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
