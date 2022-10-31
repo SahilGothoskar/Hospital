@@ -7,6 +7,8 @@ package Community;
 //import Hospital.Hospital;
 import Login.Login;
 import Patient.Patient;
+import java.awt.Insets;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -28,6 +30,14 @@ int row, col;
      */
     public Community() {
         initComponents();
+        this.setResizable(false);
+   
+    Toolkit tk = Toolkit.getDefaultToolkit();
+    int xsize = (int) tk.getScreenSize().getWidth();
+    int ysize = (int) tk.getScreenSize().getHeight(); 
+    Insets scnMax = Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()); 
+    int taskBarSize = scnMax.bottom;
+    this.setSize(xsize, ysize - taskBarSize);
     }
 
     /**
@@ -68,11 +78,13 @@ int row, col;
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 0, 51));
         jLabel1.setText("Community");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 200, 40));
 
         jLabel3.setBackground(new java.awt.Color(255, 204, 153));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 0, 0));
         jLabel3.setText("Community Page");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 520, 80));
 
@@ -93,14 +105,17 @@ int row, col;
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1380, 120));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 0, 51));
         jLabel2.setText("Doctor Name");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 200, 40));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 0, 51));
         jLabel4.setText("Speciality");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 140, 40));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 0, 51));
         jLabel5.setText("City");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 160, 40));
 
@@ -186,6 +201,7 @@ int row, col;
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 370, 160, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 0, 51));
         jLabel6.setText("Zip Code");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 160, 40));
 
@@ -193,6 +209,7 @@ int row, col;
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 280, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 0, 51));
         jLabel7.setText("Community");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 160, 40));
 

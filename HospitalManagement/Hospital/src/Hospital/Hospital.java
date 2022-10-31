@@ -7,6 +7,8 @@ package Hospital;
 import Community.Community;
 import Login.Login;
 import Patient.Patient;
+import java.awt.Insets;
+import java.awt.Toolkit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JFrame;
@@ -28,6 +30,15 @@ private JFrame frame;
      */
     public Hospital() {
         initComponents();
+    this.setResizable(false);
+   
+    Toolkit tk = Toolkit.getDefaultToolkit();
+    int xsize = (int) tk.getScreenSize().getWidth();
+    int ysize = (int) tk.getScreenSize().getHeight(); 
+    Insets scnMax = Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()); 
+    int taskBarSize = scnMax.bottom;
+    this.setSize(xsize, ysize - taskBarSize);
+
     }
 
     /**
@@ -92,6 +103,7 @@ private JFrame frame;
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 153));
@@ -111,15 +123,17 @@ private JFrame frame;
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 140, 400, 460));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Calibri", 1, 40)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Hospital Management System");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 820, 70));
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 40)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Doctor's Page");
+        jLabel2.setToolTipText("");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 270, 60));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 980, 80));
 
@@ -127,18 +141,20 @@ private JFrame frame;
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 60)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 60)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Hospital Management System");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 820, 70));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 820, 70));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 1380, 110));
 
-        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 0));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Delete");
         jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -146,67 +162,73 @@ private JFrame frame;
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 140, -1));
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 140, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 20, 170, -1));
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 170, -1));
 
         jButton5.setBackground(new java.awt.Color(204, 204, 255));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("Login");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 90, -1));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 90, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 153, 153));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("Exit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, 160, -1));
+        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 20, 160, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 204, 204));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Prescription");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 150, -1));
+        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 170, -1));
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton9.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(0, 0, 0));
         jButton9.setText("Reset");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 100, -1));
+        jPanel4.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 100, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 1380, 80));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Name of the Tablets:");
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Vital Sign");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 180, -1));
 
         jComboBox1.setBackground(new java.awt.Color(255, 255, 204));
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Paracetamol", "Ibuprofen", "Co-codamol", "Amlodipine" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Make a Selection", "Blood Pressure", "Pulse Rate", "Respiratory Rate", "Body Temperature" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -215,70 +237,87 @@ private JFrame frame;
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Reference No:");
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Medication:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 180, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Dose (mg):");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Number of Tablets:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 180, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Issue Date:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setText("LOT:");
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Rate/Value:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 180, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Daily Dose:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 180, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Expiry Date:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 180, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText(" Possible Side Effects:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 190, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Further Information:");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 180, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Storage Advice:");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 180, -1));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Driving and Using Machine:");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 250, -1));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("How to use medication:");
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, 230, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Patient ID:");
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Community");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 440, 180, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Patient Name:");
         getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 480, 180, -1));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("Date of Birth:");
         getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 530, 180, -1));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Patient Address:");
         getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 180, -1));
 
@@ -350,6 +389,11 @@ private JFrame frame;
         getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 250, -1));
 
         jTextField16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField16.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField16KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, 250, -1));
 
         jTextField17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -369,17 +413,21 @@ private JFrame frame;
         getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 250, -1));
 
         jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField18.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField18KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 250, -1));
 
         jScrollPane1.setName(""); // NOI18N
 
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Name of Tablets", "Reference No", "Dose (mg)", "Number of Tablets", "LOT", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "Community", "Patient Name", "Date of Birth", "Patient Address"
+                "Vital Sign", "Medication", "Dose (mg)", "Number of Tablets", "Rate/Value", "Issue Date", "Expiry Date", "Daily Dose", "Possible Side Effects", "Further Information", "Storage Advice", "Driving and Using Machine", "How to use medication", "Patient ID", "Community", "Patient Name", "Date of Birth", "Patient Address"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -389,6 +437,10 @@ private JFrame frame;
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 530, 120, 30));
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(204, 0, 0));
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 480, 100, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -429,22 +481,22 @@ private JFrame frame;
         String Qty13 = "";
         
 
-if(jComboBox1.getSelectedItem().equals("Ibuprofen"))
+if(jComboBox1.getSelectedItem().equals("Blood Pressure"))
 {
-Qty13 ="Ibuprofen";
+Qty13 ="Blood Pressure";
 }
-else if (jComboBox1.getSelectedItem().equals("Paracetamol"))
+else if (jComboBox1.getSelectedItem().equals("Body Temperature"))
 {
-Qty13 ="Paracetamol";
+Qty13 ="Body Temperature";
    }
-else if (jComboBox1.getSelectedItem().equals("Co-codamol"))
+else if (jComboBox1.getSelectedItem().equals("Respiratory Rate"))
 {
-Qty13= "Co-codamol";
+Qty13= "Respiratory Rate";
    }
 
-else if (jComboBox1.getSelectedItem().equals("Amlodapine"))
+else if (jComboBox1.getSelectedItem().equals("Pulse Rate"))
 {
-Qty13= "Amlodapine";
+Qty13= "Pulse Rate";
    }
         
         jTextArea3.setText("");
@@ -453,11 +505,11 @@ Qty13= "Amlodapine";
         +"\nPatient Name:\t\t" + Qty10
         +"\nDate of Birth:\t\t" + Qty12
         +"\nPatient Address:\t" + Qty11
-        +"\nPrescription:\t\t" + Qty13
-        +"\n\nReference No:\t\t" + Qty2
+        +"\nVital Sign:\t\t" + Qty13
+        +"\n\nMedication:\t\t" + Qty2
         +"\n\nDose (mg):\t\t" + Qty1
         +"\n\nNumber of Tablets:\t" + Qty3
-        +"\n\nLOT:\t\t" + Qty4
+        +"\n\nRate/Value:\t\t" + Qty4
         +"\n\nDaily Dose:\t\t" + Qty5
         +"\n\nPossible Side Effects:\t" + Qty6
         +"\n\nFurther Information:\t" + Qty7
@@ -484,11 +536,11 @@ Qty13= "Amlodapine";
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-    if (jComboBox1.getSelectedItem().equals("Ibuprofen") ){
-    jTextField3.setText("Ibu887654");
+    if (jComboBox1.getSelectedItem().equals("Blood Pressure") ){
+    jTextField3.setText("Ibuprofen");
     jTextField2.setText("2");
     jTextField4.setText("32");
-    jTextField5.setText("678912324");
+    //jTextField5.setText("678912324");
     jTextField6.setText("10/02/2022");
     jTextField7.setText("20/04/2023");
     jTextField8.setText("4");
@@ -502,11 +554,11 @@ Qty13= "Amlodapine";
     //jTextField15.setText("6466564");
     }
     
-    else if (jComboBox1.getSelectedItem().equals("Paracetamol") ){
-    jTextField3.setText("345887654");
+    else if (jComboBox1.getSelectedItem().equals("Body Temperature") ){
+    jTextField3.setText("Paracetamol");
     jTextField2.setText("500");
     jTextField4.setText("16");
-    jTextField5.setText("0204324");
+    //jTextField5.setText("0204324");
     jTextField6.setText("07/05/2022");
     jTextField7.setText("20/04/2025");
     jTextField8.setText("2");
@@ -520,23 +572,7 @@ Qty13= "Amlodapine";
     //jTextField15.setText("875564");
     }
         
-    else if (jComboBox1.getSelectedItem().equals("Amlodipine") ){
-    jTextField3.setText("Am05875");
-    jTextField2.setText("5");
-    jTextField4.setText("28");
-    jTextField5.setText("8745475");
-    jTextField6.setText("07/07/2022");
-    jTextField7.setText("28/04/2024");
-    jTextField8.setText("1");
     
-    jTextField9.setText("Liver Disease");
-    jTextField10.setText("Ability to drive may be affected");
-    jTextField11.setText("No Special Storage");
-    jTextField12.setText("No");
-    jTextField13.setText("Use Water, No Alchol");
-    //jTextField14.setText("P9129454");
-    //jTextField15.setText("6346564");
-    }
     else if (jComboBox1.getSelectedItem().equals("Make a Selection") ){
     jTextField3.setText("");
     jTextField2.setText("");
@@ -555,11 +591,11 @@ Qty13= "Amlodapine";
     jTextField15.setText("");
     }
     
-        else if (jComboBox1.getSelectedItem().equals("Paracetamol") ){
-    jTextField3.setText("345887654");
+    else if (jComboBox1.getSelectedItem().equals("Pulse Rate") ){
+    jTextField3.setText("Stamg 50mg");
     jTextField2.setText("500");
     jTextField4.setText("16");
-    jTextField5.setText("0204324");
+    //jTextField5.setText("0204324");
     jTextField6.setText("07/05/2022");
     jTextField7.setText("20/04/2025");
     jTextField8.setText("2");
@@ -573,11 +609,11 @@ Qty13= "Amlodapine";
     //jTextField15.setText("875564");
     }
         
-    else if (jComboBox1.getSelectedItem().equals("Co-codamol") ){
-    jTextField3.setText("COCO6758940");
+    else if (jComboBox1.getSelectedItem().equals("Respiratory Rate") ){
+    jTextField3.setText("Co-Codamol");
     jTextField2.setText("500");
     jTextField4.setText("30");
-    jTextField5.setText("B770034");
+    //jTextField5.setText("B770034");
     jTextField6.setText("11/10/2022");
     jTextField7.setText("28/01/2024");
     jTextField8.setText("2");
@@ -679,6 +715,23 @@ Qty13= "Amlodapine";
     private void jTextField17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyTyped
 
     }//GEN-LAST:event_jTextField17KeyTyped
+
+    private void jTextField18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField18KeyReleased
+     // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField18KeyReleased
+
+    private void jTextField16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField16KeyReleased
+        char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField16.setEditable(false);
+         
+         jLabel23.setText("Invalid Name!");
+     }else
+     {
+     jLabel23.setText(   null);
+     jTextField16.setEditable(true);
+     }           // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField16KeyReleased
     
     /**
      * @param args the command line arguments
@@ -737,6 +790,7 @@ Qty13= "Amlodapine";
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
