@@ -10,6 +10,8 @@ import Patient.Patient;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -71,6 +73,12 @@ int row, col;
         jLabel7 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1400, 800));
@@ -120,16 +128,36 @@ int row, col;
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 160, 40));
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 280, 30));
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 280, 30));
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField2KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 280, 40));
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 280, 30));
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField3KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 280, 40));
 
         jTextField4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 280, 30));
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField4KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 280, 40));
 
         jScrollPane1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
@@ -206,7 +234,12 @@ int row, col;
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 160, 40));
 
         jTextField5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 280, 30));
+        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField5KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 280, 40));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 0, 51));
@@ -214,7 +247,12 @@ int row, col;
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 160, 40));
 
         jTextField6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 280, 30));
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField6KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 280, 40));
 
         jButton6.setBackground(new java.awt.Color(255, 204, 51));
         jButton6.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
@@ -227,6 +265,35 @@ int row, col;
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 380, 160, 40));
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 0, 0));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 110, 30));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 51, 0));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 140, 30));
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 0, 51));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 210, 30));
+
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(204, 51, 0));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, 80, 30));
+
+        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 51, 0));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, 80, 30));
+
+        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(204, 0, 0));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 470, 180, 30));
+
         getAccessibleContext().setAccessibleDescription("");
 
         pack();
@@ -234,7 +301,7 @@ int row, col;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.addRow (new Object[] {jTextField1.getText(), jTextField2.getText(), jTextField3.getText(),jTextField4.getText()  });  
+        model.addRow (new Object[] {jTextField1.getText(), jTextField2.getText(), jTextField3.getText(),jTextField4.getText(), jTextField5.getText(), jTextField6.getText()  });  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -301,6 +368,92 @@ int row, col;
         frm2.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jTextField5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyReleased
+//         // TODO add your handling code here:
+
+        String PATTERN = "[0-9][0-9][0-9][0-9][0-9]";
+        Pattern patt = Pattern.compile(PATTERN);
+        Matcher match = patt.matcher(jTextField5.getText());
+        if(!match.matches()){
+        jLabel8.setText("Invalid Pin!!");
+               
+        }
+        else{
+            jLabel8.setText("");
+        }
+    }//GEN-LAST:event_jTextField5KeyReleased
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField1.setEditable(false);
+         
+         jLabel9.setText("Invalid Doc Name!");
+     }
+     else
+     {
+     jLabel9.setText( null);
+     jTextField1.setEditable(true);
+     }         // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
+        char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField6.setEditable(false);
+         
+         jLabel13.setText("Invalid Community!");
+     }
+     else
+     {
+     jLabel13.setText( null);
+     jTextField6.setEditable(true);
+    }//GEN-LAST:event_jTextField6KeyReleased
+    }
+    private void jTextField4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyReleased
+        char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField4.setEditable(false);
+         
+         jLabel12.setText("Invalid City!");
+     }
+     else
+     {
+     jLabel12.setText( null);
+     jTextField4.setEditable(true);
+    }//GEN-LAST:event_jTextField4KeyReleased
+    
+    }
+    
+    private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
+            char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField3.setEditable(false);
+         
+         jLabel11.setText("Speciality!");
+     }
+     else
+     {
+     jLabel11.setText( null);
+     jTextField3.setEditable(true);
+    }                                       
+    
+    }//GEN-LAST:event_jTextField3KeyReleased
+
+    
+    private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
+        char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField2.setEditable(false);
+         
+         jLabel10.setText("Invalid Hospital Name!");
+     }
+     else
+     {
+     jLabel10.setText( null);
+     jTextField2.setEditable(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2KeyReleased
+    }
     /**
      * @param args the command line arguments
      */
@@ -344,12 +497,18 @@ int row, col;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
